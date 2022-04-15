@@ -10,11 +10,15 @@ configMapGenerator:
       usernameSecret:
         key: git_username
         name: autopilot-secret
+    accounts.bodnar: apiKey,login
+    accounts.oleh: apiKey, login
+    admin.enabled: "false"
+    timeout.reconciliation: 10s
   name: argocd-cm
 kind: Kustomization
 namespace: argocd
 resources:
 - github.com/argoproj-labs/argocd-autopilot/manifests/base?ref=v0.3.2
 - ingress.yaml
-patchesStrategicMerge:
-- configmap.yaml
+
+#patchesStrategicMerge:
