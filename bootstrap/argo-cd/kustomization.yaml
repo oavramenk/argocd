@@ -33,3 +33,4 @@ namespace: argocd
 resources:
 - github.com/argoproj-labs/argocd-autopilot/manifests/base?ref=v0.3.2
 - ingress.yaml
+- ehoi_repo_secret.yaml
