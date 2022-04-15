@@ -18,13 +18,13 @@ configMapGenerator:
   literals:
   - |
     policy.csv=p, role:org-admin, applications, *, */*, allow
-      p, role:org-admin, clusters, get, *, allow
-      p, role:org-admin, repositories, get, *, allow
-      p, role:org-admin, repositories, create, *, allow
-      p, role:org-admin, repositories, update, *, allow
-      p, role:org-admin, repositories, delete, *, allow
-      g, bodnar, role:org-admin
-      g, oleh, role:org-admin
+    p, role:org-admin, clusters, get, *, allow
+    p, role:org-admin, repositories, get, *, allow
+    p, role:org-admin, repositories, create, *, allow
+    p, role:org-admin, repositories, update, *, allow
+    p, role:org-admin, repositories, delete, *, allow
+    g, bodnar, role:org-admin
+    g, oleh, role:org-admin
   name: argocd-rbac-cm
 kind: Kustomization
 namespace: argocd
