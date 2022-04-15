@@ -3,6 +3,10 @@ configMapGenerator:
 - behavior: merge
   literals:
   - |
+    accounts.bodnar: apiKey,login
+    accounts.oleh: apiKey, login
+    admin.enabled: "false"
+    timeout.reconciliation: 10s
     repository.credentials=- passwordSecret:
         key: git_token
         name: autopilot-secret
@@ -10,10 +14,6 @@ configMapGenerator:
       usernameSecret:
         key: git_username
         name: autopilot-secret
-    accounts.bodnar: apiKey,login
-    accounts.oleh: apiKey, login
-    admin.enabled: "false"
-    timeout.reconciliation: 10s
   name: argocd-cm
 kind: Kustomization
 namespace: argocd
