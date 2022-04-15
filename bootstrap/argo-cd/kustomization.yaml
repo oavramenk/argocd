@@ -25,6 +25,7 @@ configMapGenerator:
     p, role:org-admin, repositories, delete, *, allow
     g, bodnar, role:org-admin
     g, oleh, role:org-admin
+  - policy.default=role:''
   name: argocd-rbac-cm
 kind: Kustomization
 namespace: argocd
