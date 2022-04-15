@@ -5,6 +5,7 @@ configMapGenerator:
   - accounts.bodnar=apiKey,login
   - accounts.oleh=apiKey, login
   - timeout.reconciliation=10s
+  - admin.enabled="false"
   - |
     repository.credentials=- passwordSecret:
         key: git_token
