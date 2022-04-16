@@ -4,7 +4,7 @@ configMapGenerator:
   literals:
   - accounts.bodnar=apiKey,login
   - accounts.oleh=apiKey, login
-  - timeout.reconciliation=10s
+  - timeout.reconciliation=20s
   - admin.enabled="false"
   - |
     repository.credentials=- passwordSecret:
