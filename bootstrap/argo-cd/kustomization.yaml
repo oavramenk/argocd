@@ -10,7 +10,7 @@ configMapGenerator:
           name: GitHub
           config:
             clientID: e78276a6ce6f3f96ea3e
-            clientSecret: $argocd-github-secret.clientSecret
+            clientSecret: $argocd-github-secret:clientSecret
             orgs:
             - name: devopspoops
   - accounts.bodnar=apiKey,login
@@ -37,6 +37,7 @@ configMapGenerator:
     p, role:org-admin, repositories, delete, *, allow
     g, bodnar, role:org-admin
     g, oleh, role:org-admin
+    g, your-github-org:devopspoops, role:org-admin
   - policy.default=role:''
   name: argocd-rbac-cm
 kind: Kustomization
