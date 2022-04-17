@@ -9,7 +9,7 @@ configMapGenerator:
           id: github
           name: GitHub
           config:
-            clientID: f5d1ea56823aa66eacf1
+            clientID: e78276a6ce6f3f96ea3e
             clientSecret: github-app-secret:dex.github.clientSecret
             orgs:
             - name: devopspoops
