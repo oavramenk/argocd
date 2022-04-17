@@ -2,6 +2,17 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 configMapGenerator:
 - behavior: merge
   literals:
+  - url=https://argocd.example.com
+  - |
+    dex.config=connectors:
+        - type: github
+          id: github
+          name: GitHub
+          config:
+            clientID: f5d1ea56823aa66eacf1
+            clientSecret: github-app-secret:dex.github.clientSecret
+            orgs:
+            - name: devopspoops
   - accounts.bodnar=apiKey,login
   - accounts.oleh=apiKey, login
   - timeout.reconciliation=20s
