@@ -3,8 +3,8 @@ kind: Application
 metadata:
   name: ehoi
   namespace: argocd
-    annotations:
-      notifications.argoproj.io/subscribe.on-sync-succeeded.telegram: -1001562404876
+  annotations:
+    notifications.argoproj.io/subscribe.on-sync-succeeded.telegram: "-1001562404876"
 spec:
   project: ehoi
 

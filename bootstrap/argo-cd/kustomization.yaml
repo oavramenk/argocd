@@ -47,6 +47,6 @@ resources:
 - ingress.yaml
 - ehoi_repo_secret.yaml
 - github_app_secret.yaml
-patchesStrategicMerge:
 - argocd-notifications-secret.yaml
+patchesStrategicMerge:
 - argocd-notifications-cm.yaml
