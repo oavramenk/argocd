@@ -43,11 +43,11 @@ configMapGenerator:
 kind: Kustomization
 namespace: argocd
 
-secretGenerator:
-- behavior: replace
-  name: argocd-notifications-secret
-  files:
-  - argocd-notifications-secret.yaml
+# secretGenerator:
+# - behavior: replace
+#   name: argocd-notifications-secret
+#   files:
+#   - argocd-notifications-secret.yaml
 
 resources:
 - github.com/argoproj-labs/argocd-autopilot/manifests/base?ref=v0.3.2
@@ -55,5 +55,6 @@ resources:
 - ehoi_repo_secret.yaml
 - github_app_secret.yaml
 
-patchesStrategicMerge:
+patches:
 - argocd-notifications-cm.yaml
+- argocd-notifications-secret.yaml
