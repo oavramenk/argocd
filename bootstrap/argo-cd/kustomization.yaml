@@ -42,11 +42,17 @@ configMapGenerator:
   name: argocd-rbac-cm
 kind: Kustomization
 namespace: argocd
+
+secretGenerator:
+- name: argocd-notifications-secret
+  files:
+  - argocd-notifications-secret.yaml
+
 resources:
 - github.com/argoproj-labs/argocd-autopilot/manifests/base?ref=v0.3.2
 - ingress.yaml
 - ehoi_repo_secret.yaml
 - github_app_secret.yaml
-- argocd-notifications-secret.yaml
+
 patchesStrategicMerge:
 - argocd-notifications-cm.yaml
