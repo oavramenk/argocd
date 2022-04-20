@@ -49,3 +49,4 @@ resources:
 - github_app_secret.yaml
 patchesStrategicMerge:
 - argocd-notifications-secret.yaml
+- argocd-notifications-cm.yaml
