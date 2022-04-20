@@ -44,7 +44,8 @@ kind: Kustomization
 namespace: argocd
 
 secretGenerator:
-- name: argocd-notifications-secret
+- behavior: replace
+  name: argocd-notifications-secret
   files:
   - argocd-notifications-secret.yaml
 
