@@ -15,7 +15,7 @@ configMapGenerator:
             - name: devopspoops
   - accounts.bodnar=apiKey,login
   - accounts.oleh=apiKey, login
-  - timeout.reconciliation=20s
+  - timeout.reconciliation=300s
   - admin.enabled="false"
   - |
     repository.credentials=- passwordSecret:
