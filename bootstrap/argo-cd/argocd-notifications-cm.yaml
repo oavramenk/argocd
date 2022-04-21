@@ -11,5 +11,4 @@ data:
         send: [send-status]
   template.send-status: |
     message: |
-      Application {{.app.metadata.name}} sync is {{.app.status.sync.status}}.
-      Application details: {{.context.argocdUrl}}/applications/{{.app.metadata.name}}.
+      {{.app.metadata.name}} sync is {{.app.status.sync.status}}.
