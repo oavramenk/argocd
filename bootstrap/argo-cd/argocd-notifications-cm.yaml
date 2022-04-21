@@ -8,7 +8,11 @@ data:
   trigger.on-deployed: |
       - when: app.status.operationState.phase in ['Succeeded'] and app.status.health.status == 'Healthy'
         oncePer: app.status.sync.revision
-        send: [app-sync-succeeded]
+        send: [send-status]
+  template.send-status: |
+    message: |
+      Application {{.app.metadata.name}} sync is {{.app.status.sync.status}}.
+      Application details: {{.context.argocdUrl}}/applications/{{.app.metadata.name}}.
   triggers:
       - name: on-sync-succeeded
         enabled: true
