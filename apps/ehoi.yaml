@@ -4,7 +4,7 @@ metadata:
   name: ehoi
   namespace: argocd
   annotations:
-    notifications.argoproj.io/subscribe.on-deployed.telegram: "-737132427"
+    notifications.argoproj.io/subscribe.on-deployed.telegram: "-791561830"
 spec:
   project: ehoi
 

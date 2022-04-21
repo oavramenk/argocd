@@ -4,7 +4,7 @@ metadata:
   name: argocd-notifications-cm
 data:
   service.telegram: |
-    token: $telegram-token
+    token: $argocd-notifications-secret:telegram-token
   trigger.on-deployed: |
       - when: app.status.operationState.phase in ['Succeeded'] and app.status.health.status == 'Healthy'
         oncePer: app.status.sync.revision
