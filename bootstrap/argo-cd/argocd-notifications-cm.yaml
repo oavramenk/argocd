@@ -4,11 +4,11 @@ metadata:
   name: argocd-notifications-cm
 data:
   service.telegram: |
-    token: 5177195328:AAFF209perNBSo0i1R5igEqHiVHtLRhNAp0
+    token: $telegram-token
   trigger.on-deployed: |
       - when: app.status.operationState.phase in ['Succeeded'] and app.status.health.status == 'Healthy'
         oncePer: app.status.sync.revision
         send: [send-status]
   template.send-status: |
     message: |
-      {{.app.metadata.name}} sync is {{.app.status.sync.status}}.
+      {{.app.metadata.name}} is {{.app.status.sync.status}}. Current version: {{.app.status.summary.images[0]}}
