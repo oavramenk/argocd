@@ -11,4 +11,4 @@ data:
         send: [send-status]
   template.send-status: |
     message: |
-      {{.app.metadata.name}} is {{.app.status.sync.status}}. Current version: {{.app.status.summary.images[0]}}
+      {{.app.metadata.name}} is {{.app.status.sync.status}}. Current version: {{.app.status.summary.images}}
