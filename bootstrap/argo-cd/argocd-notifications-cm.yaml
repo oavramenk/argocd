@@ -11,4 +11,4 @@ data:
         send: [send-status]
   template.send-status: |
     message: |
-       :heavy_check_mark: Application {{.app.metadata.name}} has been successfully synced at {{.app.status.operationState.finishedAt}}
+      Application {{.app.metadata.name}} has been successfully synced at {{.app.status.operationState.finishedAt}}
