@@ -29,8 +29,8 @@ configMapGenerator:
     configManagementPlugins=:
       - name: kustomize-build-with-helm
         generate:
-          command: [ "sh", "-c" ]
-          args: [ "kustomize build --enable-helm" ]
+          command: ["sh", "-c"]
+          args: ["kustomize build --enable-helm"]
   name: argocd-cm
 - behavior: merge
   literals:
