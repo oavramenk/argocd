@@ -25,7 +25,7 @@ configMapGenerator:
       usernameSecret:
         key: git_username
         name: autopilot-secret
-    - |
+  - |
     configManagementPlugins=:
       - name: kustomize-build-with-helm
         generate:
