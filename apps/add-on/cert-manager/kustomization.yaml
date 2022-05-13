@@ -6,7 +6,7 @@ helmCharts:
   version: v1.8.0
   releaseName: cert-manager
   namespace: cert-manager
-  includeCRDs: true 
+  # includeCRDs: true 
 
-# resources:
-# - letsencrypt_issuer.yaml
+resources:
+- letsencrypt_issuer.yaml
