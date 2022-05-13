@@ -4,7 +4,7 @@ metadata:
   name: letsencrypt-prod
   namespace: cert-manager
   annotations:
-    argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 spec:
   acme:
     # The ACME server URL
