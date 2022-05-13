@@ -3,6 +3,11 @@ data:
   accounts.bodnar: apiKey,login
   accounts.oleh: apiKey, login
   admin.enabled: "false"
+  configManagementPlugins: |
+    - name: kustomize-build-with-helm
+      generate:
+        command: ["sh", "-c"]
+        args: ["kustomize build --enable-helm"]
   dex.config: |
     connectors:
         - type: github
@@ -27,13 +32,13 @@ kind: ConfigMap
 metadata:
   annotations:
     kubectl.kubernetes.io/last-applied-configuration: |
-      {"apiVersion":"v1","data":{"accounts.bodnar":"apiKey,login","accounts.oleh":"apiKey, login","admin.enabled":"false","dex.config":"connectors:\n    - type: github\n      id: github\n      name: GitHub\n      config:\n        clientID: e78276a6ce6f3f96ea3e\n        clientSecret: $argocd-github-secret:clientSecret\n        orgs:\n        - name: devopspoops\n","repository.credentials":"- passwordSecret:\n    key: git_token\n    name: autopilot-secret\n  url: https://github.com/\n  usernameSecret:\n    key: git_username\n    name: autopilot-secret\n","timeout.reconciliation":"300s","url":"https://argocd-gke.devopspoops.com"},"kind":"ConfigMap","metadata":{"annotations":{},"labels":{"app.kubernetes.io/instance":"argo-cd","app.kubernetes.io/name":"argocd-cm","app.kubernetes.io/part-of":"argocd"},"name":"argocd-cm","namespace":"argocd"}}
-  creationTimestamp: "2022-05-12T12:56:38Z"
+      {"apiVersion":"v1","data":{"accounts.bodnar":"apiKey,login","accounts.oleh":"apiKey, login","admin.enabled":"false","configManagementPlugins":"- name: kustomize-build-with-helm\n    generate:\n      command: [\"sh\", \"-c\"]\n      args: [\"kustomize build --enable-helm\"]\n","dex.config":"connectors:\n    - type: github\n      id: github\n      name: GitHub\n      config:\n        clientID: e78276a6ce6f3f96ea3e\n        clientSecret: $argocd-github-secret:clientSecret\n        orgs:\n        - name: devopspoops\n","repository.credentials":"- passwordSecret:\n    key: git_token\n    name: autopilot-secret\n  url: https://github.com/\n  usernameSecret:\n    key: git_username\n    name: autopilot-secret\n","timeout.reconciliation":"300s","url":"https://argocd-gke.devopspoops.com"},"kind":"ConfigMap","metadata":{"annotations":{},"labels":{"app.kubernetes.io/instance":"argo-cd","app.kubernetes.io/name":"argocd-cm","app.kubernetes.io/part-of":"argocd"},"name":"argocd-cm","namespace":"argocd"}}
+  creationTimestamp: "2022-05-12T13:03:07Z"
   labels:
     app.kubernetes.io/instance: argo-cd
     app.kubernetes.io/name: argocd-cm
     app.kubernetes.io/part-of: argocd
   name: argocd-cm
   namespace: argocd
-  resourceVersion: "33734563"
-  uid: 85b53d59-34a4-4e70-ad7d-a89129f71909
+  resourceVersion: "34370185"
+  uid: eb0f0b6d-f5a7-4a19-9894-0d1673c5cd70
