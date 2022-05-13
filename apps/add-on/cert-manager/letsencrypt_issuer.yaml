@@ -4,7 +4,7 @@ metadata:
   name: letsencrypt-prod
   namespace: cert-manager
   annotations:
-    argocd.argoproj.io/sync-wave: "5"
+    argocd.argoproj.io/hook: PostSync
 spec:
   acme:
     # The ACME server URL
