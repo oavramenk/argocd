@@ -6,7 +6,15 @@ helmCharts:
   version: v1.8.0
   releaseName: cert-manager
   namespace: cert-manager
-  includeCRDs: true 
+  # includeCRDs: true 
 
 resources:
+# instal CRDs
+- github.com/cert-manager/cert-manager/blob/release-1.8/deploy/crds/crd-certificaterequests.yaml
+- github.com/cert-manager/cert-manager/blob/release-1.8/deploy/crds/crd-certificates.yaml
+- github.com/cert-manager/cert-manager/blob/release-1.8/deploy/crds/crd-challenges.yaml
+- github.com/cert-manager/cert-manager/blob/release-1.8/deploy/crds/crd-clusterissuers.yaml
+- github.com/cert-manager/cert-manager/blob/release-1.8/deploy/crds/crd-issuers.yaml
+- github.com/cert-manager/cert-manager/blob/release-1.8/deploy/crds/crd-orders.yaml
+# install letsencrypt cluster issuer
 - letsencrypt_issuer.yaml
