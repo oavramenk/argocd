@@ -14,10 +14,13 @@ spec:
   - host: kibana-gke.devopspoops.com
     http:
       paths:
-      - path: /*
+      - path: /
+        pathType: Prefix
         backend:
-          serviceName: quickdemo-kb-http
-          servicePort: 5601
+          service: 
+            name: quickdemo-kb-http
+            port:
+              name: 5601
   tls:
   - hosts:
     - kibana-gke.devopspoops.com
