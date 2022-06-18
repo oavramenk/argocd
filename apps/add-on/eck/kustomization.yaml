@@ -7,3 +7,4 @@ resources:
 - elasticsearch.yaml
 - ingress_kibana.yaml
 - filebeat.yaml
+- metricbeat.yaml
