@@ -19,8 +19,8 @@ spec:
         backend:
           service:
             name: quickdemo-kb-http
-            port:
-              name: 5601
+            port: 5601
+
   tls:
   - hosts:
     - kibana-gke.devopspoops.com
