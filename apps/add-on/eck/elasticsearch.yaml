@@ -1,0 +1,13 @@
+apiVersion: elasticsearch.k8s.elastic.co/v1
+kind: Elasticsearch
+metadata:
+  name: quickdemo
+  annotations:
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+spec:
+  version: 8.2.3
+  nodeSets:
+  - name: default
+    count: 1
+    config:
+      node.store.allow_mmap: false

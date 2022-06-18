@@ -1,0 +1,11 @@
+apiVersion: kibana.k8s.elastic.co/v1
+kind: Kibana
+metadata:
+  name: quickdemo
+  annotations:
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+spec:
+  version: 8.2.3
+  count: 1
+  elasticsearchRef:
+    name: quickdemo
