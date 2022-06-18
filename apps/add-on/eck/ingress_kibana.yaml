@@ -12,7 +12,7 @@ metadata:
 spec:
   rules:
   - host: kibana-gke.devopspoops.com
-    https:
+    http:
       paths:
       - path: /*
         backend:
