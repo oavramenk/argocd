@@ -6,3 +6,4 @@ resources:
 - kibana.yaml
 - elasticsearch.yaml
 - ingress_kibana.yaml
+- filebeat.yaml
