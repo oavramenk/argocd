@@ -19,7 +19,8 @@ spec:
         backend:
           service:
             name: quickdemo-kb-http
-            port: 5601
+            port: 
+              number: 5601
 
   tls:
   - hosts:
